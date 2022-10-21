@@ -36,11 +36,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(4, 9);
+            this.label1.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 41);
+            this.label1.Size = new System.Drawing.Size(377, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bem-vindo ao Let\'s Cook!";
             // 
@@ -77,7 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(371, 183);
+            this.ClientSize = new System.Drawing.Size(379, 183);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label1);
