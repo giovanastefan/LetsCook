@@ -57,6 +57,7 @@
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // button1
             // 
@@ -77,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(379, 183);
+            this.ClientSize = new System.Drawing.Size(435, 183);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label1);

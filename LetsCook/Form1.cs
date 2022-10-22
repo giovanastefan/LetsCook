@@ -16,5 +16,12 @@ namespace LetsCook
         {
             InitializeComponent();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            formInicial form = new formInicial();
+            cadastro.Show();
+        }
     }
 }
