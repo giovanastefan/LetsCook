@@ -20,7 +20,7 @@ namespace LetsCook
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Cadastro cadastro = new Cadastro();
-            formInicial form = new formInicial();
+            this.Hide();
             cadastro.Show();
         }
     }
