@@ -9,6 +9,8 @@ namespace LetsCook
 {
     internal class Usuario
     {
+        private int id;
+        private string name;        
         private string user;
         private string password;
 
