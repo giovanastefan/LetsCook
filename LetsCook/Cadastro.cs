@@ -8,10 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MySql.Data.MySqlClient;
+
 namespace LetsCook
 {
+    
+
     public partial class Cadastro : Form
-    {            
+    {
+
+        private MySqlConnection Connection;
+        private string data_source = "datasource=localhost;username=root;password=12Dez1995.;database=db_letscook";
+
         public Cadastro()
         {
             InitializeComponent();
@@ -25,6 +33,45 @@ namespace LetsCook
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Connection = new MySqlConnection(data_source);
+                Connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = Connection;
+
+                cmd.CommandText = "INSERT INTO usuario (nome, email, senha) " +
+                                     "VALUES (@nome, @email, @senha)";
+
+                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("@email", txtUsuario.Text);
+                cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Contado inserido com sucesso!",
+                                 "Sucesso!", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erro " + ex.Number + " ocorreu: " + ex.Message,
+                                "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu " + ex.Message,
+                                    "Error", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Connection.Close();
+            }
 
         }
 
