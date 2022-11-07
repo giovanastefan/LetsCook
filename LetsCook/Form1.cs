@@ -23,5 +23,12 @@ namespace LetsCook
             this.Hide();
             cadastro.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
     }
 }
