@@ -46,9 +46,10 @@
             this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNome.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNome.Location = new System.Drawing.Point(209, 239);
+            this.txtNome.Location = new System.Drawing.Point(760, 431);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(450, 38);
@@ -61,9 +62,10 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Enabled = false;
             this.txtUsuario.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsuario.Location = new System.Drawing.Point(208, 335);
+            this.txtUsuario.Location = new System.Drawing.Point(759, 527);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(451, 38);
@@ -76,9 +78,10 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Enabled = false;
             this.txtSenha.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSenha.Location = new System.Drawing.Point(209, 436);
+            this.txtSenha.Location = new System.Drawing.Point(760, 628);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(451, 38);
@@ -90,12 +93,13 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(231)))), ((int)(((byte)(163)))));
+            this.btnCadastrar.Enabled = false;
             this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCadastrar.Location = new System.Drawing.Point(208, 502);
+            this.btnCadastrar.Location = new System.Drawing.Point(759, 694);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(451, 68);
@@ -106,8 +110,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(545, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(1096, 241);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 110);
@@ -119,8 +124,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Ebrima", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 93);
+            this.label1.Location = new System.Drawing.Point(762, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 76);
             this.label1.TabIndex = 5;
@@ -130,9 +136,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(203, 200);
+            this.label2.Location = new System.Drawing.Point(754, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 32);
             this.label2.TabIndex = 6;
@@ -142,9 +149,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(203, 398);
+            this.label3.Location = new System.Drawing.Point(754, 590);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 32);
             this.label3.TabIndex = 7;
@@ -154,9 +162,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(203, 296);
+            this.label4.Location = new System.Drawing.Point(754, 488);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 32);
             this.label4.TabIndex = 8;
@@ -167,8 +176,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(741, 620);
+            this.ClientSize = new System.Drawing.Size(1421, 839);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -182,6 +192,7 @@
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
