@@ -18,7 +18,7 @@ namespace LetsCook
     {
 
         private MySqlConnection Connection;
-        private string data_source = "datasource=localhost;username=root;password=12Dez1995.;database=db_letscook";
+        private string data_source = "Server=sql10.freesqldatabase.com;Database=sql10556505;Uid=sql10556505;Pwd=42bCRdmYVL";
 
         public Cadastro()
         {
@@ -42,11 +42,11 @@ namespace LetsCook
 
                 cmd.Connection = Connection;
 
-                cmd.CommandText = "INSERT INTO usuario (nome, email, senha) " +
-                                     "VALUES (@nome, @email, @senha)";
+                cmd.CommandText = "INSERT INTO usuario (nome, usuario, senha) " +
+                                     "VALUES (@nome, @usuario, @senha)";
 
                 cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("@email", txtUsuario.Text);
+                cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                 cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
 
                 cmd.Prepare();
