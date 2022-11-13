@@ -12,13 +12,8 @@ using MySql.Data.MySqlClient;
 
 namespace LetsCook
 {
-    
-
     public partial class Cadastro : Form
     {
-
-        private MySqlConnection Connection;
-        private string data_source = "Server=sql10.freesqldatabase.com;Database=sql10556505;Uid=sql10556505;Pwd=42bCRdmYVL";
 
         public Cadastro()
         {
@@ -33,46 +28,34 @@ namespace LetsCook
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            Conexao conexao= new Conexao();
+
             try
             {
-                Connection = new MySqlConnection(data_source);
-                Connection.Open();
 
-                MySqlCommand cmd = new MySqlCommand();
-
-                cmd.Connection = Connection;
-
-                cmd.CommandText = "INSERT INTO usuario (nome, usuario, senha) " +
+                conexao.cmd.CommandText = "INSERT INTO usuario (nome, usuario, senha) " +
                                      "VALUES (@nome, @usuario, @senha)";
 
-                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+                conexao.cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                conexao.cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
 
-                cmd.Prepare();
+                conexao.cmd.Prepare();
 
-                cmd.ExecuteNonQuery();
+                conexao.cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Contado inserido com sucesso!",
                                  "Sucesso!", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
             }
-            catch (MySqlException ex)
+            catch
             {
-                MessageBox.Show("Erro " + ex.Number + " ocorreu: " + ex.Message,
-                                "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu " + ex.Message,
-                                    "Error", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                MessageBox.Show("Algo deu errado, tente novamente!");
             }
             finally
             {
-                Connection.Close();
+                conexao.fecharConexao();
             }
-
         }
 
         private void Cadastro_Load(object sender, EventArgs e)
