@@ -83,7 +83,9 @@ namespace LetsCook
 
             if (resultado != null)
             {
-                MessageBox.Show("Conectado!!");
+                PaginaPrincipal principal= new PaginaPrincipal();
+                this.Hide();
+                principal.Show();
             }
 
             else
