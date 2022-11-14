@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Ocsp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,13 +24,6 @@ namespace LetsCook
             Cadastro cadastro = new Cadastro();
             this.Hide();
             cadastro.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            this.Hide();
-            login.Show();
         }
 
         private void formInicial_Load(object sender, EventArgs e)
@@ -74,6 +69,32 @@ namespace LetsCook
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Conexao conexao = new Conexao();
+
+            conexao.cmd.CommandText = "select * from usuario where usuario=@Usuario and senha=@Senha";
+            conexao.cmd.Parameters.AddWithValue("@Usuario", txtNome.Text);
+            conexao.cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
+            
+            var resultado = conexao.cmd.ExecuteScalar();
+
+            if (resultado != null)
+            {
+                MessageBox.Show("Conectado!!");
+            }
+
+            else
+            {
+                MessageBox.Show("Usuário ou senha incorreta, tente novamente!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNome.Text = "";
+                txtSenha.Text = "";
+                txtNome.Select();
+            }
+
+            conexao.fecharConexao();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +12,11 @@ namespace LetsCook
 {
     internal class Conexao
     {
-        private MySqlConnection Connection;
+        public MySqlConnection Connection;
         private string data_source = "Server=sql10.freesqldatabase.com;Database=sql10556505;Uid=sql10556505;Pwd=42bCRdmYVL";
         public MySqlCommand cmd = new MySqlCommand();
+
+        // diferença entre sqlConnection e MySqlConnection?
 
         public Conexao()
         {
@@ -37,5 +41,6 @@ namespace LetsCook
         {
             Connection.Close();
         }
+
     }
 }
