@@ -21,5 +21,18 @@ namespace LetsCook
         {
             Application.Exit();
         }
+
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarReceitas janela = new BuscarReceitas();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            childPanel.Controls.Add(janela);
+        }
     }
 }
