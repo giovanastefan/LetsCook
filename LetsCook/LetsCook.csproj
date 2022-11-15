@@ -84,6 +84,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarReceitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarReceitas.Designer.cs">
+      <DependentUpon>AdicionarReceitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarReceitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receitas.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="AdicionarReceitas.resx">
+      <DependentUpon>AdicionarReceitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarReceitas.resx">
       <DependentUpon>BuscarReceitas.cs</DependentUpon>
     </EmbeddedResource>

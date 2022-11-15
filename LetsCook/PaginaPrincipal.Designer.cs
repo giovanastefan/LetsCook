@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnAdicionarReceita = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.btnAdicionarReceita);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnSair);
@@ -54,6 +56,37 @@
             this.panel1.Size = new System.Drawing.Size(1563, 75);
             this.panel1.TabIndex = 0;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(351, 15);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(169, 46);
+            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.Text = "Buscar Receitas";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(248, 15);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(95, 46);
+            this.btnHome.TabIndex = 14;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
@@ -61,7 +94,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(902, 12);
+            this.btnSair.Location = new System.Drawing.Point(902, 15);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(157, 46);
@@ -102,36 +135,21 @@
             this.childPanel.Size = new System.Drawing.Size(1047, 473);
             this.childPanel.TabIndex = 12;
             // 
-            // btnHome
+            // btnAdicionarReceita
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(270, 15);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(95, 46);
-            this.btnHome.TabIndex = 14;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(373, 15);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(168, 46);
-            this.btnBuscar.TabIndex = 15;
-            this.btnBuscar.Text = "Buscar Receitas";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnAdicionarReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnAdicionarReceita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(528, 15);
+            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarReceita.Name = "btnAdicionarReceita";
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(200, 46);
+            this.btnAdicionarReceita.TabIndex = 16;
+            this.btnAdicionarReceita.Text = "Adicionar Receita";
+            this.btnAdicionarReceita.UseVisualStyleBackColor = false;
+            this.btnAdicionarReceita.Click += new System.EventHandler(this.btnAdicionarReceita_Click);
             // 
             // PaginaPrincipal
             // 
@@ -163,5 +181,6 @@
         private System.Windows.Forms.Panel childPanel;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnAdicionarReceita;
     }
 }

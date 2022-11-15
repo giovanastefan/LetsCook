@@ -29,7 +29,17 @@ namespace LetsCook
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            childPanel.Controls.Clear();
             BuscarReceitas janela = new BuscarReceitas();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            childPanel.Controls.Add(janela);
+        }
+
+        private void btnAdicionarReceita_Click(object sender, EventArgs e)
+        {
+            childPanel.Controls.Clear();
+            AdicionarReceitas janela = new AdicionarReceitas();
             janela.TopLevel = false;
             janela.Visible = true;
             childPanel.Controls.Add(janela);
