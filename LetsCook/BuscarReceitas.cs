@@ -25,16 +25,18 @@ namespace LetsCook
 
         private void btnAdicionarIngredientes_Click(object sender, EventArgs e)
         {
-            receitas.adicionarIngrediente(txtIngrediente.Text);
-
-            if (lblIngredientes.Text == "")
+            if (txtIngrediente.Text.Trim() != "")
             {
-                lblIngredientes.Text = "Ingredientes adicionados: " + lblIngredientes.Text + txtIngrediente.Text;
-            }
-            else
-            {
-                lblIngredientes.Text = lblIngredientes.Text + ", " + txtIngrediente.Text;
+                receitas.adicionarIngrediente(txtIngrediente.Text);
+                if (lblIngredientes.Text == "")
+                {
+                    lblIngredientes.Text = "Ingredientes adicionados: " + lblIngredientes.Text + txtIngrediente.Text;
+                }
+                else
+                {
+                    lblIngredientes.Text = lblIngredientes.Text + ", " + txtIngrediente.Text;
 
+                }
             }
 
             txtIngrediente.Text = "";

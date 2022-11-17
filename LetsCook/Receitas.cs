@@ -17,5 +17,19 @@ namespace LetsCook
             Ingredientes.Add(ingrediente);
         }
 
+        public string converteParaString(List<string> itens)
+        {
+            itens.Sort();
+            string stringFinal = "";
+            foreach(string item in itens) {
+                if (stringFinal == "")
+                    stringFinal = stringFinal + item.ToLower();
+                else
+                    stringFinal = stringFinal + " " + item.ToLower();
+            }
+
+            return stringFinal;
+        }
+
     }
 }

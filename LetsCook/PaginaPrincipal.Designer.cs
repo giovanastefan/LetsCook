@@ -63,10 +63,10 @@
             this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
             this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(528, 15);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(557, 15);
             this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(200, 46);
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(217, 46);
             this.btnAdicionarReceita.TabIndex = 16;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = false;
@@ -82,7 +82,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(351, 15);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(169, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(198, 46);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar Receitas";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F);
             this.btnHome.Location = new System.Drawing.Point(248, 15);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
@@ -102,6 +102,7 @@
             this.btnHome.TabIndex = 14;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnSair
             // 
@@ -164,7 +165,6 @@
             this.Name = "PaginaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LetsCook";
-            this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

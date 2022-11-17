@@ -90,6 +90,7 @@
             this.btnAdicionarReceita.TabIndex = 17;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = false;
+            this.btnAdicionarReceita.Click += new System.EventHandler(this.btnAdicionarReceita_Click);
             // 
             // btnLimpar
             // 
@@ -151,6 +152,7 @@
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(336, 37);
             this.txtItem.TabIndex = 23;
+            this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
             // 
             // btnAdd
             // 
@@ -166,13 +168,14 @@
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtIngredientes
             // 
-            this.txtIngredientes.Enabled = false;
             this.txtIngredientes.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold);
             this.txtIngredientes.Location = new System.Drawing.Point(816, 197);
             this.txtIngredientes.Name = "txtIngredientes";
+            this.txtIngredientes.ReadOnly = true;
             this.txtIngredientes.Size = new System.Drawing.Size(416, 204);
             this.txtIngredientes.TabIndex = 25;
             this.txtIngredientes.Text = "";

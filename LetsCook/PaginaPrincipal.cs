@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +18,25 @@ namespace LetsCook
             InitializeComponent();
         }
 
+        public void limparFontes()
+        {
+            btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
+            btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Regular);
+            btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Regular);
+
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void PaginaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            limparFontes();
             childPanel.Controls.Clear();
             BuscarReceitas janela = new BuscarReceitas();
+            btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Bold);
             janela.TopLevel = false;
             janela.Visible = true;
             childPanel.Controls.Add(janela);
@@ -38,11 +44,20 @@ namespace LetsCook
 
         private void btnAdicionarReceita_Click(object sender, EventArgs e)
         {
+            limparFontes();
             childPanel.Controls.Clear();
             AdicionarReceitas janela = new AdicionarReceitas();
+            btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Bold);
             janela.TopLevel = false;
             janela.Visible = true;
             childPanel.Controls.Add(janela);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            limparFontes();
+            childPanel.Controls.Clear();
+            btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
         }
     }
 }
