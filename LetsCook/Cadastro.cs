@@ -123,5 +123,12 @@ namespace LetsCook
         {
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            formInicial telainicial = new formInicial();
+            this.Hide();
+            telainicial.Show();
+        }
     }
 }
