@@ -54,5 +54,10 @@ namespace LetsCook
         {
 
         }
+
+        private void txtIngrediente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

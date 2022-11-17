@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdicionarReceita = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
-            this.btnAdicionarReceita = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1563, 75);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAdicionarReceita
+            // 
+            this.btnAdicionarReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnAdicionarReceita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(528, 15);
+            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarReceita.Name = "btnAdicionarReceita";
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(200, 46);
+            this.btnAdicionarReceita.TabIndex = 16;
+            this.btnAdicionarReceita.Text = "Adicionar Receita";
+            this.btnAdicionarReceita.UseVisualStyleBackColor = false;
+            this.btnAdicionarReceita.Click += new System.EventHandler(this.btnAdicionarReceita_Click);
             // 
             // btnBuscar
             // 
@@ -94,7 +110,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(902, 15);
+            this.btnSair.Location = new System.Drawing.Point(1379, 15);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(157, 46);
@@ -132,31 +148,15 @@
             this.childPanel.BackColor = System.Drawing.Color.Transparent;
             this.childPanel.Location = new System.Drawing.Point(12, 91);
             this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(1047, 473);
+            this.childPanel.Size = new System.Drawing.Size(1525, 561);
             this.childPanel.TabIndex = 12;
-            // 
-            // btnAdicionarReceita
-            // 
-            this.btnAdicionarReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.btnAdicionarReceita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(528, 15);
-            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(200, 46);
-            this.btnAdicionarReceita.TabIndex = 16;
-            this.btnAdicionarReceita.Text = "Adicionar Receita";
-            this.btnAdicionarReceita.UseVisualStyleBackColor = false;
-            this.btnAdicionarReceita.Click += new System.EventHandler(this.btnAdicionarReceita_Click);
             // 
             // PaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1075, 576);
+            this.ClientSize = new System.Drawing.Size(1549, 664);
             this.Controls.Add(this.childPanel);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

@@ -42,10 +42,10 @@
             this.btnBuscarReceitas.FlatAppearance.BorderSize = 0;
             this.btnBuscarReceitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarReceitas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarReceitas.Location = new System.Drawing.Point(646, 423);
+            this.btnBuscarReceitas.Location = new System.Drawing.Point(1112, 500);
             this.btnBuscarReceitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarReceitas.Name = "btnBuscarReceitas";
-            this.btnBuscarReceitas.Size = new System.Drawing.Size(388, 37);
+            this.btnBuscarReceitas.Size = new System.Drawing.Size(400, 48);
             this.btnBuscarReceitas.TabIndex = 14;
             this.btnBuscarReceitas.Text = "Buscar receita";
             this.btnBuscarReceitas.UseVisualStyleBackColor = false;
@@ -58,10 +58,10 @@
             this.btnAdicionarIngredientes.FlatAppearance.BorderSize = 0;
             this.btnAdicionarIngredientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarIngredientes.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarIngredientes.Location = new System.Drawing.Point(806, 18);
+            this.btnAdicionarIngredientes.Location = new System.Drawing.Point(1092, 32);
             this.btnAdicionarIngredientes.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarIngredientes.Name = "btnAdicionarIngredientes";
-            this.btnAdicionarIngredientes.Size = new System.Drawing.Size(228, 37);
+            this.btnAdicionarIngredientes.Size = new System.Drawing.Size(228, 38);
             this.btnAdicionarIngredientes.TabIndex = 13;
             this.btnAdicionarIngredientes.Text = "Adicionar ingrediente";
             this.btnAdicionarIngredientes.UseVisualStyleBackColor = false;
@@ -70,17 +70,18 @@
             // txtIngrediente
             // 
             this.txtIngrediente.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngrediente.Location = new System.Drawing.Point(386, 18);
+            this.txtIngrediente.Location = new System.Drawing.Point(389, 32);
             this.txtIngrediente.Name = "txtIngrediente";
-            this.txtIngrediente.Size = new System.Drawing.Size(413, 37);
+            this.txtIngrediente.Size = new System.Drawing.Size(696, 37);
             this.txtIngrediente.TabIndex = 12;
+            this.txtIngrediente.TextChanged += new System.EventHandler(this.txtIngrediente_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ebrima", 19.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 10);
+            this.label2.Location = new System.Drawing.Point(12, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(338, 45);
             this.label2.TabIndex = 11;
@@ -91,7 +92,7 @@
             // 
             this.lblIngredientes.AutoSize = true;
             this.lblIngredientes.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngredientes.Location = new System.Drawing.Point(24, 111);
+            this.lblIngredientes.Location = new System.Drawing.Point(13, 165);
             this.lblIngredientes.Name = "lblIngredientes";
             this.lblIngredientes.Size = new System.Drawing.Size(0, 38);
             this.lblIngredientes.TabIndex = 15;
@@ -102,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1047, 473);
+            this.ClientSize = new System.Drawing.Size(1525, 561);
             this.Controls.Add(this.lblIngredientes);
             this.Controls.Add(this.btnBuscarReceitas);
             this.Controls.Add(this.btnAdicionarIngredientes);
