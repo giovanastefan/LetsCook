@@ -42,37 +42,7 @@ namespace LetsCook
 
         private void btnBuscarReceitas_Click(object sender, EventArgs e)
         {
-            Conexao conexao = new Conexao();
-            string itens = "";
-
-            foreach (string item in receitas.Ingredientes)
-            {
-                if (itens == "")
-                {
-                    itens = itens + item;
-                }
-                else
-                {
-                    itens = itens + " " + item;
-                }
-            }
-
-            conexao.cmd.CommandText = "select * from receita where ingredientes=@ingredientes";
-            conexao.cmd.Parameters.AddWithValue("@ingredientes", itens);
-
-            var resultado = conexao.cmd.ExecuteScalar();
-
-            if (resultado != null)
-            {
-                MessageBox.Show("Receitas Encontradas");
-            }
-
-            else
-            {
-                MessageBox.Show("Nenhuma receita encontrada");
-            }
-
-            conexao.fecharConexao();
+         
         }
 
         private void label2_Click(object sender, EventArgs e)

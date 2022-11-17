@@ -13,10 +13,8 @@ namespace LetsCook
     internal class Conexao
     {
         public MySqlConnection Connection;
-        private string data_source = "Server=sql10.freesqldatabase.com;Database=sql10556505;Uid=sql10556505;Pwd=42bCRdmYVL";
+        private string data_source = "Server=sql9.freemysqlhosting.net;Database=sql9576945;Uid=sql9576945;Pwd=k5A97GfcYr";
         public MySqlCommand cmd = new MySqlCommand();
-
-        // diferença entre sqlConnection e MySqlConnection?
 
         public Conexao()
         {
@@ -29,7 +27,7 @@ namespace LetsCook
             }
             catch (MySqlException ex)
             {
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
             catch (Exception ex)
             {
