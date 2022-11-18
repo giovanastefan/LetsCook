@@ -23,7 +23,19 @@ namespace LetsCook
             btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
             btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Regular);
             btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Regular);
+        }
 
+        public void limparPanel()
+        {
+            limparFontes();
+            childPanel.Controls.Clear();
+        }
+
+        public void alterarPanel(Form janela)
+        {
+            janela.TopLevel = false;
+            janela.Visible = true;
+            childPanel.Controls.Add(janela);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -33,8 +45,7 @@ namespace LetsCook
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            limparFontes();
-            childPanel.Controls.Clear();
+            limparPanel();
             BuscarReceitas janela = new BuscarReceitas();
             btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Bold);
             janela.TopLevel = false;
@@ -44,8 +55,7 @@ namespace LetsCook
 
         private void btnAdicionarReceita_Click(object sender, EventArgs e)
         {
-            limparFontes();
-            childPanel.Controls.Clear();
+            limparPanel();
             AdicionarReceitas janela = new AdicionarReceitas();
             btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Bold);
             janela.TopLevel = false;
@@ -55,9 +65,13 @@ namespace LetsCook
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            limparFontes();
-            childPanel.Controls.Clear();
+            limparPanel();
             btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
+        }
+
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

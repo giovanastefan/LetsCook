@@ -165,6 +165,7 @@
             this.Name = "PaginaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LetsCook";
+            this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -178,9 +179,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Panel childPanel;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnAdicionarReceita;
+        public System.Windows.Forms.Panel childPanel;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.Button btnHome;
+        public System.Windows.Forms.Button btnAdicionarReceita;
     }
 }
