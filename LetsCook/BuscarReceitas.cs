@@ -106,6 +106,7 @@ namespace LetsCook
 
                     MySqlDataReader final = r.ExecuteReader();
 
+                    // esta funcionando, falta passar para o form retorno receitas <3
                     while (final.Read())
                     {
                         MessageBox.Show(final["titulo"].ToString());
