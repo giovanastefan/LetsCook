@@ -12,8 +12,8 @@ namespace LetsCook
 {
     internal class Conexao
     {
-        public MySqlConnection Connection;
         private string data_source = "Server=sql9.freemysqlhosting.net;Database=sql9576945;Uid=sql9576945;Pwd=k5A97GfcYr";
+        public MySqlConnection Connection;
         public MySqlCommand cmd = new MySqlCommand();
 
         public Conexao()
@@ -33,6 +33,13 @@ namespace LetsCook
             {
                 throw ex;
             }
+        }
+
+        public MySqlCommand consulta(string comando)
+        {
+            Connection = new MySqlConnection(data_source);
+            MySqlCommand command = new MySqlCommand(comando, Connection);
+            return command;
         }
 
         public void fecharConexao()

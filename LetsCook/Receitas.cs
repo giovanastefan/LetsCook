@@ -8,6 +8,7 @@ namespace LetsCook
 {
     internal class Receitas
     {
+        public int id;
         public List<string> Ingredientes = new List<string>();
    
         public Receitas() { }

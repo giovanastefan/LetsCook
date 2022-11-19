@@ -53,5 +53,10 @@ namespace LetsCook
 
             conexao.fecharConexao();
         }
+
+        private void formInicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
