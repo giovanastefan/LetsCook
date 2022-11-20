@@ -37,8 +37,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.childPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,11 +53,12 @@
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 11);
+            this.panel1.Location = new System.Drawing.Point(2, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1563, 75);
+            this.panel1.Size = new System.Drawing.Size(1758, 94);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnAdicionarReceita
             // 
@@ -63,10 +67,10 @@
             this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
             this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(557, 15);
-            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(700, 25);
+            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(217, 46);
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(246, 42);
             this.btnAdicionarReceita.TabIndex = 16;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = false;
@@ -79,10 +83,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(351, 15);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(453, 25);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(198, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(223, 42);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar Receitas";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -95,10 +99,10 @@
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F);
-            this.btnHome.Location = new System.Drawing.Point(248, 15);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(322, 25);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(95, 46);
+            this.btnHome.Size = new System.Drawing.Size(107, 42);
             this.btnHome.TabIndex = 14;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -111,10 +115,10 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(1379, 15);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Location = new System.Drawing.Point(1551, 19);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(157, 46);
+            this.btnSair.Size = new System.Drawing.Size(177, 58);
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -124,40 +128,54 @@
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(193, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(218, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(54, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Ebrima", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(14, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 45);
+            this.label1.Size = new System.Drawing.Size(206, 54);
             this.label1.TabIndex = 7;
             this.label1.Text = "Let\'sCook";
             // 
             // childPanel
             // 
             this.childPanel.BackColor = System.Drawing.Color.Transparent;
-            this.childPanel.Location = new System.Drawing.Point(12, 91);
+            this.childPanel.Controls.Add(this.pictureBox2);
+            this.childPanel.Location = new System.Drawing.Point(14, 114);
+            this.childPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(1525, 561);
+            this.childPanel.Size = new System.Drawing.Size(1716, 701);
             this.childPanel.TabIndex = 12;
+            this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(602, -18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1130, 769);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // PaginaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1549, 664);
+            this.ClientSize = new System.Drawing.Size(1743, 830);
             this.Controls.Add(this.childPanel);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -170,6 +188,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.childPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +204,6 @@
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Button btnHome;
         public System.Windows.Forms.Button btnAdicionarReceita;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

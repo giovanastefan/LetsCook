@@ -58,5 +58,15 @@ namespace LetsCook
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = '*';
+        }
     }
 }
