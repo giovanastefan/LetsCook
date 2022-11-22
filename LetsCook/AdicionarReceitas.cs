@@ -56,6 +56,7 @@ namespace LetsCook
 
             ingredientes = receitas.converteParaString(receitas.Ingredientes);
             Conexao conexao = new Conexao();
+            conexao.abrirConexao();
 
             try
             {

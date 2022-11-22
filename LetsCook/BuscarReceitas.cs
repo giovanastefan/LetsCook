@@ -16,10 +16,18 @@ namespace LetsCook
 {
     public partial class BuscarReceitas : Form
     {
+        public static BuscarReceitas instanciaBuscarReceitas;
         Receitas receitas = new Receitas();
+
         public BuscarReceitas()
         {
             InitializeComponent();
+            instanciaBuscarReceitas = this;
+        }
+
+        public List<string> itens()
+        {
+            return receitas.Ingredientes;
         }
 
         private void BuscarReceitas_Load(object sender, EventArgs e)
@@ -48,82 +56,10 @@ namespace LetsCook
 
         private void btnBuscarReceitas_Click(object sender, EventArgs e)
         {
-            string data_source = "Server=sql9.freemysqlhosting.net;Database=sql9576945;Uid=sql9576945;Pwd=k5A97GfcYr";
-            try
-            {
-                MySqlConnection conn = new MySqlConnection(data_source);
+            RetornoReceitas r = new RetornoReceitas();
 
-                string sql = "SELECT id, ingredientes from receitas";
-                string[] itens = new string[10];
-                List<string[]> total = new List<string[]>();
-                List<int> retorno = new List<int>();
-
-
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-                conn.Open();
-
-                MySqlDataReader leitor = cmd.ExecuteReader();
-
-                while (leitor.Read())
-                {
-                    itens = leitor["ingredientes"].ToString().Split(' ');
-                    string id = leitor["id"].ToString();
-                    itens.Append(id);
-                    total.Add(itens);
-                }
-
-                conn.Close();
-
-                int contItens = receitas.Ingredientes.Count();
-                int contem = 0;
-
-                foreach(string[] i in total)
-                {
-                    contem = 0;
-                    foreach(string j in i)
-                    {
-                        if (receitas.Ingredientes.Contains(j))
-                        {
-                            contem++;
-                        }
-                    }
-                    if(contem == i.Length)
-                    {
-                        retorno.Add(total.IndexOf(i) + 1);
-                    }
-                }
-
-                foreach(int i in retorno)
-                {
-
-                    string comand = "SELECT * from receitas WHERE id = @id";
-
-                    MySqlCommand r = new MySqlCommand(comand, conn);
-                    r.Parameters.AddWithValue("@id", i);
-
-                    conn.Open();
-
-                    MySqlDataReader final = r.ExecuteReader();
-
-                    // esta funcionando, falta passar para o form retorno receitas <3
-                    while (final.Read())
-                    {
-                        MessageBox.Show(final["titulo"].ToString());
-                    }
-
-                    conn.Close();
-                }
-
-
-            }
-            catch
-            {
-                MessageBox.Show("nao");
-            }
-            finally
-            {
-            }
+            PaginaPrincipal.fontes.limparPanel();
+            PaginaPrincipal.fontes.alterarPanel(r);
         }
 
         private void label2_Click(object sender, EventArgs e)

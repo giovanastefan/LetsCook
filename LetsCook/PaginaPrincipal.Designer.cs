@@ -37,11 +37,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.childPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1758, 94);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnAdicionarReceita
             // 
@@ -145,31 +141,18 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(14, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 54);
+            this.label1.Size = new System.Drawing.Size(172, 45);
             this.label1.TabIndex = 7;
             this.label1.Text = "Let\'sCook";
             // 
             // childPanel
             // 
             this.childPanel.BackColor = System.Drawing.Color.Transparent;
-            this.childPanel.Controls.Add(this.pictureBox2);
             this.childPanel.Location = new System.Drawing.Point(14, 114);
             this.childPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.childPanel.Name = "childPanel";
             this.childPanel.Size = new System.Drawing.Size(1716, 701);
             this.childPanel.TabIndex = 12;
-            this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(602, -18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1130, 769);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // PaginaPrincipal
             // 
@@ -188,22 +171,18 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.childPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Panel childPanel;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Button btnHome;
         public System.Windows.Forms.Button btnAdicionarReceita;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnSair;
     }
 }

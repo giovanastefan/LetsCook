@@ -30,7 +30,9 @@ namespace LetsCook
         {
             Conexao conexao = new Conexao();
 
-            conexao.cmd.CommandText = "select * from usuario where usuario=@Usuario and senha=@Senha";
+            string command = "select * from usuario where usuario=@Usuario and senha=@Senha";
+
+            conexao.consulta(command);
             conexao.cmd.Parameters.AddWithValue("@Usuario", txtNome.Text);
             conexao.cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
             

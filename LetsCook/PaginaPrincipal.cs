@@ -13,9 +13,12 @@ namespace LetsCook
 {
     public partial class PaginaPrincipal : Form
     {
+        public static PaginaPrincipal fontes;
         public PaginaPrincipal()
         {
             InitializeComponent();
+
+            fontes = this;
         }
 
         public void limparFontes()
@@ -48,9 +51,7 @@ namespace LetsCook
             limparPanel();
             BuscarReceitas janela = new BuscarReceitas();
             btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Bold);
-            janela.TopLevel = false;
-            janela.Visible = true;
-            childPanel.Controls.Add(janela);
+            alterarPanel(janela);
         }
 
         private void btnAdicionarReceita_Click(object sender, EventArgs e)
@@ -58,33 +59,18 @@ namespace LetsCook
             limparPanel();
             AdicionarReceitas janela = new AdicionarReceitas();
             btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Bold);
-            janela.TopLevel = false;
-            janela.Visible = true;
-            childPanel.Controls.Add(janela);
+            alterarPanel(janela);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             limparPanel();
+            HomePage janela = new HomePage();
             btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
+            alterarPanel(janela);
         }
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void childPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
