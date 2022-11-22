@@ -8,9 +8,9 @@ namespace LetsCook
 {
     internal class Receitas
     {
-        public int id;
-        public List<string> Ingredientes = new List<string>();
-   
+        public int id; //verificar se esse campo pode ser publico
+        public List<string> Ingredientes = new List<string>(); //verificar se esse campo pode ser publico
+
         public Receitas() { }
 
         public void adicionarIngrediente(string ingrediente)

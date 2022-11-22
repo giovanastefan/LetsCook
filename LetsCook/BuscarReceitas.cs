@@ -18,6 +18,7 @@ namespace LetsCook
     {
         public static BuscarReceitas instanciaBuscarReceitas;
         Receitas receitas = new Receitas();
+        Conexao conexao  = new Conexao();
 
         public BuscarReceitas()
         {
@@ -32,7 +33,7 @@ namespace LetsCook
 
         private void BuscarReceitas_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnAdicionarIngredientes_Click(object sender, EventArgs e)
@@ -56,10 +57,52 @@ namespace LetsCook
 
         private void btnBuscarReceitas_Click(object sender, EventArgs e)
         {
-            RetornoReceitas r = new RetornoReceitas();
+            if (String.IsNullOrEmpty(lblIngredientes.Text))
+            {
+                 MessageBox.Show("Nenhum ingrediente adicionado!!");
+            }
+            else
+            {
+                string parametrosBusca = "";
 
-            PaginaPrincipal.fontes.limparPanel();
-            PaginaPrincipal.fontes.alterarPanel(r);
+                for (int i = 0; i < itens().Count; i++)
+                {
+                    parametrosBusca += " LIKE %" + itens().ElementAt(i) + "% AND descricao ";
+                }
+
+                parametrosBusca = parametrosBusca.Remove(parametrosBusca.Length - 15);
+
+                MessageBox.Show(parametrosBusca);
+
+                try
+                {
+                    conexao.cmd.CommandText = "SELECT titulo FROM receitas" +
+                                              "WHERE descricao @parametroBusca";
+
+                    conexao.cmd.Parameters.AddWithValue("@parametroBusca", parametrosBusca);
+
+                    conexao.cmd.Prepare();
+
+                    MessageBox.Show("Tudo certo na leitura, parça!!!");
+
+                }catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+
+                }
+
+
+                /*RetornoReceitas r = new RetornoReceitas();
+
+                PaginaPrincipal.fontes.limparPanel();
+                PaginaPrincipal.fontes.alterarPanel(r);*/
+
+
+
+            }            
         }
 
         private void label2_Click(object sender, EventArgs e)

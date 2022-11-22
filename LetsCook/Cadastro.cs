@@ -28,10 +28,11 @@ namespace LetsCook
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Conexao conexao= new Conexao();
+            Conexao conexao = new Conexao();
 
             try
             {
+                
 
                 conexao.cmd.CommandText = "INSERT INTO usuario (nome, usuario, senha) " +
                                      "VALUES (@nome, @usuario, @senha)";
