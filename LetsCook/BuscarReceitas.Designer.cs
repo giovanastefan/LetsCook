@@ -73,7 +73,6 @@
             this.txtIngrediente.Name = "txtIngrediente";
             this.txtIngrediente.Size = new System.Drawing.Size(523, 31);
             this.txtIngrediente.TabIndex = 12;
-            this.txtIngrediente.TextChanged += new System.EventHandler(this.txtIngrediente_TextChanged);
             // 
             // label2
             // 
@@ -86,7 +85,6 @@
             this.label2.Size = new System.Drawing.Size(283, 37);
             this.label2.TabIndex = 11;
             this.label2.Text = "Digite o ingrediente:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblIngredientes
             // 
@@ -97,7 +95,6 @@
             this.lblIngredientes.Name = "lblIngredientes";
             this.lblIngredientes.Size = new System.Drawing.Size(0, 30);
             this.lblIngredientes.TabIndex = 15;
-            this.lblIngredientes.Click += new System.EventHandler(this.lblIngredientes_Click);
             // 
             // BuscarReceitas
             // 

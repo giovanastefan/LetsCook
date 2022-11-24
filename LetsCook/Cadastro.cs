@@ -32,22 +32,41 @@ namespace LetsCook
 
             try
             {
-                
+                string verificacao = "SELECT * from usuario where usuario = @usuario";
 
-                conexao.cmd.CommandText = "INSERT INTO usuario (nome, usuario, senha) " +
+
+                conexao.consulta(verificacao);
+                conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                var resultado = conexao.cmd.ExecuteScalar();
+
+                if (resultado != null)
+                {
+                    MessageBox.Show("Usuário ja cadastrado!");
+                }
+
+                else
+                {
+                    string command = "INSERT INTO usuario (nome, usuario, senha) " +
                                      "VALUES (@nome, @usuario, @senha)";
 
-                conexao.cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                conexao.cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
 
-                conexao.cmd.Prepare();
+                    conexao.consulta(command);
 
-                conexao.cmd.ExecuteNonQuery();
+                    conexao.cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                    conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                    conexao.cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
 
-                MessageBox.Show("Contado inserido com sucesso!",
-                                 "Sucesso!", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    conexao.cmd.Prepare();
+
+                    conexao.cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Contado inserido com sucesso!",
+                                     "Sucesso!", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                }
+                    txtNome.Clear();
+                    txtUsuario.Clear();
+                    txtSenha.Clear();
             }
             catch
             {

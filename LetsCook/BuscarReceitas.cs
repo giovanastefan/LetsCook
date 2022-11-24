@@ -40,7 +40,7 @@ namespace LetsCook
         {
             if (txtIngrediente.Text.Trim() != "")
             {
-                receitas.adicionarIngrediente(txtIngrediente.Text);
+                receitas.adicionarIngrediente(txtIngrediente.Text.Trim());
                 if (lblIngredientes.Text == "")
                 {
                     lblIngredientes.Text = "Ingredientes adicionados: " + lblIngredientes.Text + txtIngrediente.Text;
@@ -57,7 +57,7 @@ namespace LetsCook
 
         private void btnBuscarReceitas_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(lblIngredientes.Text))
+            /*if (String.IsNullOrEmpty(lblIngredientes.Text))
             {
                  MessageBox.Show("Nenhum ingrediente adicionado!!");
             }
@@ -92,32 +92,14 @@ namespace LetsCook
                 finally
                 {
 
-                }
+                }*/
 
 
-                /*RetornoReceitas r = new RetornoReceitas();
+                RetornoReceitas r = new RetornoReceitas();
 
                 PaginaPrincipal.fontes.limparPanel();
-                PaginaPrincipal.fontes.alterarPanel(r);*/
-
-
-
-            }            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblIngredientes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIngrediente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+                PaginaPrincipal.fontes.alterarPanel(r);
+                PaginaPrincipal.fontes.alterarPanel(r);
+        }  
     }
 }

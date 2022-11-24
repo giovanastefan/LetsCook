@@ -43,7 +43,7 @@ namespace LetsCook
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

@@ -51,6 +51,7 @@ namespace LetsCook
                     contem = 0;
                     foreach (string j in i)
                     {
+                        //colocar LIKE %
                         if (ingredientesReceita.Contains(j))
                         {
                             contem++;
@@ -72,11 +73,16 @@ namespace LetsCook
 
 
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
+                    List<string[]> lista = new List<string[]>();
+                    Label label = new Label();
+                    CardReceita[] cardReceita = new CardReceita[20];
 
+                    int j = 0;
                     while (final.Read())
                     {
-                        //adaptar para uma lista
-                        MessageBox.Show(final["titulo"].ToString());
+                        cardReceita[j] = new CardReceita();
+                        cardReceita[j].Title = "teste"; 
+                        j++;
                     }
                     conexao.fecharConexao();
                 }
@@ -93,6 +99,12 @@ namespace LetsCook
             var r = BuscarReceitas.instanciaBuscarReceitas.itens();
 
             retornaReceitas(r);
+            CardReceita[] cardReceita = new CardReceita[20];
+            for (int i=0; i<cardReceita.Length; i++)
+            {
+                cardReceita[i] = new CardReceita();
+                cardReceita[i].Title = "teste";
+            }
         }
     }
 }

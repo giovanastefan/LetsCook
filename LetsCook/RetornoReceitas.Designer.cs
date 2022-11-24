@@ -28,39 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.cardReceita1 = new LetsCook.CardReceita();
             this.SuspendLayout();
             // 
-            // label1
+            // cardReceita1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(487, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Receitas encontradas:";
+            this.cardReceita1.BackColor = System.Drawing.Color.White;
+            this.cardReceita1.Location = new System.Drawing.Point(12, 12);
+            this.cardReceita1.Name = "cardReceita1";
+            this.cardReceita1.Size = new System.Drawing.Size(760, 150);
+            this.cardReceita1.TabIndex = 0;
             // 
             // RetornoReceitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1525, 561);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.ClientSize = new System.Drawing.Size(1716, 701);
+            this.Controls.Add(this.cardReceita1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RetornoReceitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RetornoReceitas";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.RetornoReceitas_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private CardReceita cardReceita1;
     }
 }

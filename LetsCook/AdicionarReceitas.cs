@@ -61,8 +61,10 @@ namespace LetsCook
             try
             {
 
-                conexao.cmd.CommandText = "INSERT INTO receitas (titulo, ingredientes, modo_preparo) " +
+                string comando = "INSERT INTO receitas (titulo, ingredientes, modo_preparo) " +
                                      "VALUES (@titulo, @ingredientes, @modo_preparo)";
+
+                conexao.consulta(comando);
 
                 conexao.cmd.Parameters.AddWithValue("@titulo", txtTitulo.Text);
                 conexao.cmd.Parameters.AddWithValue("@ingredientes", ingredientes);
