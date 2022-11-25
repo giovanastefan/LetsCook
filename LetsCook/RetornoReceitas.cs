@@ -14,9 +14,6 @@ namespace LetsCook
     public partial class RetornoReceitas : Form
     {
         private int contem;
-        private string[] titulo;
-        private string[] ingredientes;
-        private string[] modoPreparo;
 
         private Receitas[] receitas;
         
