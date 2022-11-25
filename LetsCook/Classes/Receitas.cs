@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsCook
+namespace LetsCook.Classes
 {
     internal class Receitas
     {
-        public int id; //verificar se esse campo pode ser publico
-        public List<string> Ingredientes = new List<string>(); //verificar se esse campo pode ser publico
-        public string titulo;
-        public string ingredientes;
-        public string modoPreparo;
+        private int id { get; set; }
+        private string titulo { get; set; }
+        private string ingrediente { get; set; }
+        private string modo_preparo { get; set; }
 
-        public Receitas() { }
+        public List<string> Ingredientes = new List<string>();
 
         public void adicionarIngrediente(string ingrediente)
         {
@@ -25,7 +24,8 @@ namespace LetsCook
         {
             itens.Sort();
             string stringFinal = "";
-            foreach(string item in itens) {
+            foreach (string item in itens)
+            {
                 if (stringFinal == "")
                     stringFinal = stringFinal + item.ToLower();
                 else

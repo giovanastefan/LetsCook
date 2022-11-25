@@ -51,10 +51,10 @@
             this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNome.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNome.Location = new System.Drawing.Point(636, 334);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtNome.Location = new System.Drawing.Point(565, 267);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(450, 38);
+            this.txtNome.Size = new System.Drawing.Size(400, 32);
             this.txtNome.TabIndex = 0;
             this.txtNome.Tag = "Nome";
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
@@ -66,10 +66,10 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsuario.Location = new System.Drawing.Point(634, 430);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtUsuario.Location = new System.Drawing.Point(564, 344);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(451, 38);
+            this.txtUsuario.Size = new System.Drawing.Size(401, 32);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "Nome";
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
@@ -81,10 +81,10 @@
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSenha.Location = new System.Drawing.Point(636, 530);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtSenha.Location = new System.Drawing.Point(565, 424);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(451, 38);
+            this.txtSenha.Size = new System.Drawing.Size(401, 32);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Tag = "Nome";
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
@@ -92,17 +92,17 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(231)))), ((int)(((byte)(163)))));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCadastrar.Location = new System.Drawing.Point(636, 598);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCadastrar.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(565, 478);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(451, 68);
+            this.btnCadastrar.Size = new System.Drawing.Size(401, 54);
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -111,8 +111,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(971, 89);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(863, 71);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -124,9 +124,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(622, 149);
+            this.label1.Location = new System.Drawing.Point(553, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 76);
+            this.label1.Size = new System.Drawing.Size(242, 62);
             this.label1.TabIndex = 5;
             this.label1.Text = "Let\'sCook";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -136,9 +136,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(629, 294);
+            this.label2.Location = new System.Drawing.Point(559, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 32);
+            this.label2.Size = new System.Drawing.Size(69, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nome";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -148,9 +148,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(630, 490);
+            this.label3.Location = new System.Drawing.Point(560, 392);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 32);
+            this.label3.Size = new System.Drawing.Size(69, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "Senha";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -160,9 +160,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(630, 390);
+            this.label4.Location = new System.Drawing.Point(560, 312);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 32);
+            this.label4.Size = new System.Drawing.Size(84, 28);
             this.label4.TabIndex = 8;
             this.label4.Text = "Usuário";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -174,10 +174,9 @@
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(14, 15);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(48, 55);
+            this.btnVoltar.Size = new System.Drawing.Size(43, 44);
             this.btnVoltar.TabIndex = 9;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -187,21 +186,21 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Enabled = false;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 65);
+            this.pictureBox2.Size = new System.Drawing.Size(54, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1743, 830);
+            this.ClientSize = new System.Drawing.Size(1549, 664);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label4);
@@ -214,7 +213,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";

@@ -43,7 +43,7 @@ namespace LetsCook
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -72,7 +72,17 @@ namespace LetsCook
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
+            limparPanel();
+            HomePage janela = new HomePage();
+            btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
+            alterarPanel(janela);
+        }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formInicial telaInical = new formInicial();
+            telaInical.Show();
         }
     }
 }

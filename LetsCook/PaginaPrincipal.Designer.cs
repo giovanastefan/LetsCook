@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnAdicionarReceita = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnAdicionarReceita);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.btnHome);
@@ -53,8 +55,24 @@
             this.panel1.Location = new System.Drawing.Point(2, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1758, 94);
+            this.panel1.Size = new System.Drawing.Size(1563, 83);
             this.panel1.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(1364, 47);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(160, 31);
+            this.btnLogout.TabIndex = 17;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAdicionarReceita
             // 
@@ -63,10 +81,10 @@
             this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
             this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(700, 25);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(574, 25);
             this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(246, 42);
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(218, 42);
             this.btnAdicionarReceita.TabIndex = 16;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = false;
@@ -79,10 +97,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(453, 25);
+            this.btnBuscar.Location = new System.Drawing.Point(364, 25);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(223, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(202, 42);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar Receitas";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -95,7 +113,7 @@
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Ebrima", 12F);
-            this.btnHome.Location = new System.Drawing.Point(322, 25);
+            this.btnHome.Location = new System.Drawing.Point(249, 25);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(107, 42);
@@ -110,11 +128,11 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(1387, 16);
+            this.btnSair.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(1364, 7);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(177, 58);
+            this.btnSair.Size = new System.Drawing.Size(160, 34);
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -124,10 +142,10 @@
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(218, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(188, 7);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(54, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -139,7 +157,7 @@
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Ebrima", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 19);
+            this.label1.Location = new System.Drawing.Point(10, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 45);
             this.label1.TabIndex = 7;
@@ -148,17 +166,18 @@
             // childPanel
             // 
             this.childPanel.BackColor = System.Drawing.Color.Transparent;
-            this.childPanel.Location = new System.Drawing.Point(14, 114);
+            this.childPanel.Location = new System.Drawing.Point(12, 100);
             this.childPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(1716, 701);
+            this.childPanel.Size = new System.Drawing.Size(1553, 717);
             this.childPanel.TabIndex = 12;
             // 
             // PaginaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1743, 830);
+            this.ClientSize = new System.Drawing.Size(1572, 825);
             this.Controls.Add(this.childPanel);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -166,6 +185,7 @@
             this.Name = "PaginaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LetsCook";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -183,5 +203,6 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnSair;
+        public System.Windows.Forms.Button btnLogout;
     }
 }

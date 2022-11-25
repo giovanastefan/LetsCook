@@ -56,19 +56,14 @@ namespace LetsCook
             conexao.fecharConexao();
         }
 
-        private void formInicial_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
             txtSenha.PasswordChar = '*';
+        }
+
+        private void formInicial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

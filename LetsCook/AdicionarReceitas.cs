@@ -12,7 +12,7 @@ namespace LetsCook
 {
     public partial class AdicionarReceitas : Form
     {
-        Receitas receitas = new Receitas();
+        Classes.Receitas receitas = new Classes.Receitas();
         string ingredientes;
         public AdicionarReceitas()
         {

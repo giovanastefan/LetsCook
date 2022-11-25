@@ -15,7 +15,7 @@ namespace LetsCook
     {
         private int contem;
 
-        private Receitas[] receitas;
+        private Classes.Receitas[] receitas;
         
 
         Conexao conexao = new Conexao();
@@ -80,17 +80,15 @@ namespace LetsCook
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
                     List<string[]> lista = new List<string[]>();
 
-                    receitas = new Receitas[contem];
+                    receitas = new Classes.Receitas[contem];
 
                     //int j = 0;
                     while (final.Read())
                     {
-                        //receitas[i].id = final.GetInt32(0);
+                        /*receitas[i].id = final.GetInt32(0);
                         receitas[i].titulo = final.GetString(1).ToString();
                         receitas[i].ingredientes = final.GetString(2).ToString();
-                        receitas[i].modoPreparo = final.GetString(3).ToString()
-                            ;                                    
-
+                        receitas[i].modoPreparo = final.GetString(3).ToString()*/                                
                     }
                     
                 }
@@ -114,13 +112,13 @@ namespace LetsCook
 
             for (int i = 0; i < contem; i++)
             {
-                lista[i] = new CardReceita();
+                /*lista[i] = new CardReceita();
 
                 lista[i].Titulo = receitas[i].titulo;
                 lista[i].Ingredientes = receitas[i].ingredientes;
                 lista[i].Descricao = receitas[i].modoPreparo;
 
-                flowLayoutPanel1.Controls.Add(lista[i]);
+                flowLayoutPanel1.Controls.Add(lista[i]);*/
             }
         }
 
@@ -131,26 +129,6 @@ namespace LetsCook
             retornaReceitas(r);
             GenerateDynamicUserControl();
 
-
-        }
-
-        private void cardReceita1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cardReceita1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cardReceita1_Load_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }
