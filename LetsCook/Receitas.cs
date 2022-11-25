@@ -10,6 +10,9 @@ namespace LetsCook
     {
         public int id; //verificar se esse campo pode ser publico
         public List<string> Ingredientes = new List<string>(); //verificar se esse campo pode ser publico
+        public string titulo;
+        public string ingredientes;
+        public string modoPreparo;
 
         public Receitas() { }
 
