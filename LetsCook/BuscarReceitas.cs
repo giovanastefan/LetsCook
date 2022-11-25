@@ -17,8 +17,8 @@ namespace LetsCook
     public partial class BuscarReceitas : Form
     {
         public static BuscarReceitas instanciaBuscarReceitas;
-        Receitas receitas = new Receitas();
-        Conexao conexao  = new Conexao();
+        Classes.Receitas receitas = new Classes.Receitas();
+        Conexao conexao = new Conexao();
 
         public BuscarReceitas()
         {
