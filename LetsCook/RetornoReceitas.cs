@@ -8,22 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using LetsCook.Classes;
 
 namespace LetsCook
 {
     public partial class RetornoReceitas : Form
     {
         private int contem;
-
-        private Classes.Receitas[] receitas;
-        
+        private Receitas[] receitas;
+        DataTable receitasEncontradas = new DataTable();          
 
         Conexao conexao = new Conexao();
 
         public RetornoReceitas()
         {
             InitializeComponent();
-            
         }   
 
         public void retornaReceitas(List<string> ingredientesReceita)
@@ -80,15 +79,22 @@ namespace LetsCook
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
                     List<string[]> lista = new List<string[]>();
 
-                    receitas = new Classes.Receitas[contem];
+                    receitasEncontradas.Load(final);
+
+
+
+                    receitas = new Receitas[contem];
 
                     //int j = 0;
                     while (final.Read())
                     {
                         /*receitas[i].id = final.GetInt32(0);
-                        receitas[i].titulo = final.GetString(1).ToString();
-                        receitas[i].ingredientes = final.GetString(2).ToString();
-                        receitas[i].modoPreparo = final.GetString(3).ToString()*/                                
+                        receitas[i].titulo = final.GetString(1);
+                        receitas[i].ingrediente = final.GetString(2);
+                        receitas[i].modo_preparo = final.GetString(3);*/
+
+                        
+
                     }
                     
                 }
@@ -108,17 +114,34 @@ namespace LetsCook
         {
             flowLayoutPanel1.Controls.Clear();
 
-            CardReceita[] lista = new CardReceita[contem];            
 
-            for (int i = 0; i < contem; i++)
+
+            CardReceita[] lista = new CardReceita[1000];
+
+            /*for (int i = 0; i < contem; i++)
             {
-                /*lista[i] = new CardReceita();
+                lista[i] = new CardReceita();
 
                 lista[i].Titulo = receitas[i].titulo;
-                lista[i].Ingredientes = receitas[i].ingredientes;
-                lista[i].Descricao = receitas[i].modoPreparo;
+                lista[i].Ingredientes = receitas[i].ingrediente;
+                lista[i].Descricao = receitas[i].modo_preparo;
 
-                flowLayoutPanel1.Controls.Add(lista[i]);*/
+                flowLayoutPanel1.Controls.Add(lista[i]);
+            }*/
+
+            int j = 0;
+
+            foreach(DataRow receitas in receitasEncontradas.Rows)
+            {
+                lista[j] = new CardReceita();
+
+                lista[j].Titulo = receitas["titulo"].ToString();
+                lista[j].Ingredientes = receitas["ingredientes"].ToString();
+                lista[j].Descricao = receitas["modo_preparo"].ToString();
+
+                flowLayoutPanel1.Controls.Add(lista[j]);
+
+                j++;
             }
         }
 
@@ -129,6 +152,18 @@ namespace LetsCook
             retornaReceitas(r);
             GenerateDynamicUserControl();
 
+            MessageBox.Show(" Receitas encontradas: " + contem);
+
+
+        }
+
+        private void cardReceita1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -8,10 +8,10 @@ namespace LetsCook.Classes
 {
     internal class Receitas
     {
-        private int id { get; set; }
-        private string titulo { get; set; }
-        private string ingrediente { get; set; }
-        private string modo_preparo { get; set; }
+        public int id { get; set; }
+        public string titulo { get; set; }
+        public string ingrediente { get; set; }
+        public string modo_preparo { get; set; }
 
         public List<string> Ingredientes = new List<string>();
 
