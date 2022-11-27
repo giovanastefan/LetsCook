@@ -14,9 +14,8 @@ namespace LetsCook
 {
     public partial class RetornoReceitas : Form
     {
-        private int contem;
-        private Receitas[] receitas;
-        DataTable receitasEncontradas = new DataTable();          
+        Receitas[] receitas = new Receitas[0];
+        List<int> retorno = new List<int>();
 
         Conexao conexao = new Conexao();
 
@@ -32,7 +31,7 @@ namespace LetsCook
                 string sql = "SELECT id, ingredientes from receitas";
                 
                 List<string[]> total = new List<string[]>();
-                List<int> retorno = new List<int>();
+                
                 string[] itens = new string[10];
                 conexao.consulta(sql);
 
@@ -40,34 +39,37 @@ namespace LetsCook
 
                 while (leitor.Read())
                 {
-                    itens = leitor["ingredientes"].ToString().Split(' ');
-                    string id = leitor["id"].ToString();
+                    itens = leitor["ingredientes"].ToString().Split(' '); //pega todos os ingredientes das receitas da consulta, separa por espaço, e salva no vetor 'leitor'
+                    string id = leitor["id"].ToString(); //pega todos os ids das receitas da consulta e salva na string id
                     itens.Append(id);
-                    total.Add(itens);
+                    total.Add(itens); //adiciona o vetor com os ingredientes a lista de vetores 'total'
                 }
 
                 conexao.fecharConexao();
 
                 int contItens = ingredientesReceita.Count();
-                contem = 0;
+                int contem = 0;
 
-                foreach (string[] i in total)
+                foreach (string[] i in total) //passa por todos os vetores de string que estão na lista 'total'.
                 {
                     contem = 0;
-                    foreach (string j in i)
+                    foreach (string j in i) //passa por todo o vetor de string 'i' encontrado no foreach anterior.
                     {
                         //colocar LIKE %
-                        if (ingredientesReceita.Contains(j))
+                        if (ingredientesReceita.Contains(j)) //verifica se as strings da verificação anterior estão presentes na lista de ingredientes passada como parâmetro no método.
                         {
                             contem++;
                         }
                     }
-                    if (contem == i.Length)
+                    if (contem == i.Length) //verifica se o numero de ingredientes da lista é igual ao tamanho do vetor 'i'. 
                     {
-                        retorno.Add(total.IndexOf(i) + 1);
+                        retorno.Add(total.IndexOf(i) + 1); //adiciona na lista de retorno o id do vetor de strings que contem na lista total.
                     }
                 }
 
+                receitas = new Receitas[retorno.Count()];
+
+                int k = 0;
                 foreach (int i in retorno)
                 {
 
@@ -79,24 +81,16 @@ namespace LetsCook
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
                     List<string[]> lista = new List<string[]>();
 
-                    receitasEncontradas.Load(final);
-
-
-
-                    receitas = new Receitas[contem];
-
-                    //int j = 0;
                     while (final.Read())
                     {
-                        /*receitas[i].id = final.GetInt32(0);
-                        receitas[i].titulo = final.GetString(1);
-                        receitas[i].ingrediente = final.GetString(2);
-                        receitas[i].modo_preparo = final.GetString(3);*/
+                        receitas[k] = new Receitas();
 
-                        
-
+                        receitas[k].titulo = final.GetString(1);
+                        receitas[k].ingrediente = final.GetString(2);
+                        receitas[k].modo_preparo = final.GetString(3);
                     }
-                    
+
+                    k += 1;
                 }
             }
             catch
@@ -107,41 +101,24 @@ namespace LetsCook
             {
                 conexao.fecharConexao();
             }
-
         }
 
         private void GenerateDynamicUserControl()
         {
             flowLayoutPanel1.Controls.Clear();
 
+            CardReceita[] lista = new CardReceita[retorno.Count];
 
-
-            CardReceita[] lista = new CardReceita[1000];
-
-            /*for (int i = 0; i < contem; i++)
+            for (int i = 0; i < lista.Length; i++)
             {
                 lista[i] = new CardReceita();
 
+                
                 lista[i].Titulo = receitas[i].titulo;
                 lista[i].Ingredientes = receitas[i].ingrediente;
                 lista[i].Descricao = receitas[i].modo_preparo;
 
                 flowLayoutPanel1.Controls.Add(lista[i]);
-            }*/
-
-            int j = 0;
-
-            foreach(DataRow receitas in receitasEncontradas.Rows)
-            {
-                lista[j] = new CardReceita();
-
-                lista[j].Titulo = receitas["titulo"].ToString();
-                lista[j].Ingredientes = receitas["ingredientes"].ToString();
-                lista[j].Descricao = receitas["modo_preparo"].ToString();
-
-                flowLayoutPanel1.Controls.Add(lista[j]);
-
-                j++;
             }
         }
 
@@ -152,9 +129,7 @@ namespace LetsCook
             retornaReceitas(r);
             GenerateDynamicUserControl();
 
-            MessageBox.Show(" Receitas encontradas: " + contem);
-
-
+            MessageBox.Show(" Receitas encontradas: " + retorno.Count);
         }
 
         private void cardReceita1_Load(object sender, EventArgs e)
