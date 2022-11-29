@@ -78,6 +78,7 @@ namespace LetsCook
                     conexao.cmd.Parameters.AddWithValue("@id", i);
 
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
+                    List<string[]> lista = new List<string[]>();
 
                     while (final.Read())
                     {
