@@ -55,7 +55,6 @@ namespace LetsCook
                     contem = 0;
                     foreach (string j in i) //passa por todo o vetor de string 'i' encontrado no foreach anterior.
                     {
-                        //colocar LIKE %
                         if (ingredientesReceita.Contains(j)) //verifica se as strings da verificação anterior estão presentes na lista de ingredientes passada como parâmetro no método.
                         {
                             contem++;
@@ -79,7 +78,6 @@ namespace LetsCook
                     conexao.cmd.Parameters.AddWithValue("@id", i);
 
                     MySqlDataReader final = conexao.cmd.ExecuteReader();
-                    List<string[]> lista = new List<string[]>();
 
                     while (final.Read())
                     {
@@ -112,7 +110,6 @@ namespace LetsCook
             for (int i = 0; i < lista.Length; i++)
             {
                 lista[i] = new CardReceita();
-
                 
                 lista[i].Titulo = receitas[i].titulo;
                 lista[i].Ingredientes = receitas[i].ingrediente;

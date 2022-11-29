@@ -84,5 +84,13 @@ namespace LetsCook
             formInicial telaInical = new formInicial();
             telaInical.Show();
         }
+
+        private void btnReceitas_Click(object sender, EventArgs e)
+        {
+            limparPanel();
+            BuscaReceitasGeral janela = new BuscaReceitasGeral();
+            btnReceitas.Font = new Font(btnHome.Font, FontStyle.Bold);
+            alterarPanel(janela);
+        }
     }
 }

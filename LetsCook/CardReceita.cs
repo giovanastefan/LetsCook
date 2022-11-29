@@ -40,7 +40,7 @@ namespace LetsCook
         public string Descricao
         {
             get { return _descricao; }
-            set { _descricao = value; labelDescricao.Text = value; }
+            set { _descricao = value; richTextBox1.Text = value; }
         }
 
         private void CardReceita_Load(object sender, EventArgs e)

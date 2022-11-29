@@ -34,7 +34,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAdicionarReceita = new System.Windows.Forms.Button();
+            this.btnReceitas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,20 +90,21 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Para ver todas receitas e busca-las clique abaixo";
             // 
-            // btnAdicionarReceita
+            // btnReceitas
             // 
-            this.btnAdicionarReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.btnAdicionarReceita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(80, 341);
-            this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(218, 42);
-            this.btnAdicionarReceita.TabIndex = 17;
-            this.btnAdicionarReceita.Text = "Receitas";
-            this.btnAdicionarReceita.UseVisualStyleBackColor = false;
+            this.btnReceitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnReceitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceitas.FlatAppearance.BorderSize = 0;
+            this.btnReceitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceitas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceitas.Location = new System.Drawing.Point(80, 341);
+            this.btnReceitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReceitas.Name = "btnReceitas";
+            this.btnReceitas.Size = new System.Drawing.Size(218, 42);
+            this.btnReceitas.TabIndex = 17;
+            this.btnReceitas.Text = "Receitas";
+            this.btnReceitas.UseVisualStyleBackColor = false;
+            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
             // 
             // HomePage
             // 
@@ -112,7 +113,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
             this.ClientSize = new System.Drawing.Size(1553, 717);
-            this.Controls.Add(this.btnAdicionarReceita);
+            this.Controls.Add(this.btnReceitas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -138,6 +139,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button btnAdicionarReceita;
+        public System.Windows.Forms.Button btnReceitas;
     }
 }

@@ -88,5 +88,10 @@ namespace LetsCook
                 conexao.fecharConexao();
             }
         }
+
+        private void AdicionarReceitas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

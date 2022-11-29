@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
+            this.btnReceitas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.btnReceitas);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnAdicionarReceita);
             this.panel1.Controls.Add(this.btnBuscar);
@@ -81,10 +83,10 @@
             this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
             this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(574, 25);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(704, 25);
             this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
-            this.btnAdicionarReceita.Size = new System.Drawing.Size(218, 42);
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(194, 42);
             this.btnAdicionarReceita.TabIndex = 16;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = false;
@@ -97,10 +99,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(364, 25);
+            this.btnBuscar.Location = new System.Drawing.Point(517, 25);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(202, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(179, 42);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar Receitas";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -172,10 +174,25 @@
             this.childPanel.Size = new System.Drawing.Size(1553, 717);
             this.childPanel.TabIndex = 12;
             // 
+            // btnReceitas
+            // 
+            this.btnReceitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnReceitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceitas.FlatAppearance.BorderSize = 0;
+            this.btnReceitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceitas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceitas.Location = new System.Drawing.Point(364, 25);
+            this.btnReceitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReceitas.Name = "btnReceitas";
+            this.btnReceitas.Size = new System.Drawing.Size(145, 42);
+            this.btnReceitas.TabIndex = 18;
+            this.btnReceitas.Text = "Receitas";
+            this.btnReceitas.UseVisualStyleBackColor = false;
+            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
+            // 
             // PaginaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1572, 825);
             this.Controls.Add(this.childPanel);
@@ -185,7 +202,6 @@
             this.Name = "PaginaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LetsCook";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -204,5 +220,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Button btnLogout;
+        public System.Windows.Forms.Button btnReceitas;
     }
 }

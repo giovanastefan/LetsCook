@@ -16,5 +16,14 @@ namespace LetsCook
         {
             InitializeComponent();
         }
+
+        private void btnReceitas_Click(object sender, EventArgs e)
+        {
+            BuscaReceitasGeral r = new BuscaReceitasGeral();
+            this.Hide();
+
+            PaginaPrincipal.fontes.limparPanel();
+            PaginaPrincipal.fontes.alterarPanel(r);
+        }
     }
 }
