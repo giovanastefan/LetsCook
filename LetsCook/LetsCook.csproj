@@ -116,6 +116,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceitasFavoritas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceitasFavoritas.Designer.cs">
+      <DependentUpon>ReceitasFavoritas.cs</DependentUpon>
+    </Compile>
     <Compile Include="RetornoReceitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceitasFavoritas.resx">
+      <DependentUpon>ReceitasFavoritas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetornoReceitas.resx">
       <DependentUpon>RetornoReceitas.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Asn1.Ocsp;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,12 @@ namespace LetsCook
 {
     public partial class formInicial : Form
     {
+        public static formInicial instanciaLogin;
+        Usuario usuario = new Usuario();
         public formInicial()
         {
             InitializeComponent();
+            instanciaLogin = this;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -26,34 +30,46 @@ namespace LetsCook
             cadastro.Show();
         }
 
+        public int getId()
+        {
+            return usuario.getId();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Conexao conexao = new Conexao();
-
-            string command = "select * from usuario where usuario=@Usuario and senha=@Senha";
-
-            conexao.consulta(command);
-            conexao.cmd.Parameters.AddWithValue("@Usuario", txtNome.Text);
-            conexao.cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
-            
-            var resultado = conexao.cmd.ExecuteScalar();
-
-            if (resultado != null)
+            try
             {
-                PaginaPrincipal principal= new PaginaPrincipal();
-                this.Hide();
-                principal.Show();
-            }
+                Conexao conexao = new Conexao();
 
-            else
+                string command = "select * from usuario where usuario=@Usuario and senha=@Senha";
+
+                conexao.consulta(command);
+                conexao.cmd.Parameters.AddWithValue("@Usuario", txtNome.Text);
+                conexao.cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
+
+                MySqlDataReader leitor = conexao.cmd.ExecuteReader();
+
+                int i = 0;
+                while (leitor.Read() && i == 0)
+                {
+                    usuario.setId(Convert.ToInt32(leitor["id"]));
+                    usuario.setUser(leitor["usuario"].ToString());
+                    i++;
+                }
+
+                conexao.fecharConexao();
+
+                this.Hide();
+                PaginaPrincipal principal = new PaginaPrincipal();
+                principal.Show();
+            } 
+            catch
             {
                 MessageBox.Show("Usuário ou senha incorreta, tente novamente!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Text = "";
                 txtSenha.Text = "";
                 txtNome.Select();
             }
-
-            conexao.fecharConexao();
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)

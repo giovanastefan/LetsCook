@@ -19,20 +19,31 @@ namespace LetsCook
             return user;
         }
 
-        public string getPassword()
-        {
-            return password;
-        }
-
-        // validar se será possivel o usuario alterar seu user e senha
         public void setUser(string user)
         {
             this.user = user;
         }
 
-        public void setPassword(string password)
+        public string getName()
         {
-            this.password = password;
+            return name;
         }
+
+        public void setName(string name)
+        {
+            this.name = user;
+        }
+
+        public int getId()
+        {
+            return id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
+
     }
 }

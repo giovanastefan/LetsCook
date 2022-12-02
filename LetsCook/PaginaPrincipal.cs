@@ -26,6 +26,8 @@ namespace LetsCook
             btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
             btnBuscar.Font = new Font(btnBuscar.Font, FontStyle.Regular);
             btnAdicionarReceita.Font = new Font(btnAdicionarReceita.Font, FontStyle.Regular);
+            btnReceitasFavoritas.Font = new Font(btnReceitasFavoritas.Font, FontStyle.Regular);
+            btnReceitas.Font = new Font(btnReceitas.Font, FontStyle.Regular);
         }
 
         public void limparPanel()
@@ -90,6 +92,14 @@ namespace LetsCook
             limparPanel();
             BuscaReceitasGeral janela = new BuscaReceitasGeral();
             btnReceitas.Font = new Font(btnHome.Font, FontStyle.Bold);
+            alterarPanel(janela);
+        }
+
+        private void btnReceitasFavoritas_Click(object sender, EventArgs e)
+        {
+            limparPanel();
+            ReceitasFavoritas janela = new ReceitasFavoritas();
+            btnReceitasFavoritas.Font = new Font(btnHome.Font, FontStyle.Bold);
             alterarPanel(janela);
         }
     }

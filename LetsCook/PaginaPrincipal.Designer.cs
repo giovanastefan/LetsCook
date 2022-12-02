@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReceitas = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAdicionarReceita = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.Panel();
-            this.btnReceitas = new System.Windows.Forms.Button();
+            this.btnReceitasFavoritas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.btnReceitasFavoritas);
             this.panel1.Controls.Add(this.btnReceitas);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnAdicionarReceita);
@@ -59,6 +61,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1563, 83);
             this.panel1.TabIndex = 0;
+            // 
+            // btnReceitas
+            // 
+            this.btnReceitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnReceitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceitas.FlatAppearance.BorderSize = 0;
+            this.btnReceitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceitas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceitas.Location = new System.Drawing.Point(364, 25);
+            this.btnReceitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReceitas.Name = "btnReceitas";
+            this.btnReceitas.Size = new System.Drawing.Size(145, 42);
+            this.btnReceitas.TabIndex = 18;
+            this.btnReceitas.Text = "Receitas";
+            this.btnReceitas.UseVisualStyleBackColor = false;
+            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
             // 
             // btnLogout
             // 
@@ -174,21 +192,21 @@
             this.childPanel.Size = new System.Drawing.Size(1553, 717);
             this.childPanel.TabIndex = 12;
             // 
-            // btnReceitas
+            // btnReceitasFavoritas
             // 
-            this.btnReceitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
-            this.btnReceitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReceitas.FlatAppearance.BorderSize = 0;
-            this.btnReceitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceitas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceitas.Location = new System.Drawing.Point(364, 25);
-            this.btnReceitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReceitas.Name = "btnReceitas";
-            this.btnReceitas.Size = new System.Drawing.Size(145, 42);
-            this.btnReceitas.TabIndex = 18;
-            this.btnReceitas.Text = "Receitas";
-            this.btnReceitas.UseVisualStyleBackColor = false;
-            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
+            this.btnReceitasFavoritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(69)))));
+            this.btnReceitasFavoritas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceitasFavoritas.FlatAppearance.BorderSize = 0;
+            this.btnReceitasFavoritas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceitasFavoritas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceitasFavoritas.Location = new System.Drawing.Point(906, 25);
+            this.btnReceitasFavoritas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReceitasFavoritas.Name = "btnReceitasFavoritas";
+            this.btnReceitasFavoritas.Size = new System.Drawing.Size(194, 42);
+            this.btnReceitasFavoritas.TabIndex = 19;
+            this.btnReceitasFavoritas.Text = "Receitas Favoritas";
+            this.btnReceitasFavoritas.UseVisualStyleBackColor = false;
+            this.btnReceitasFavoritas.Click += new System.EventHandler(this.btnReceitasFavoritas_Click);
             // 
             // PaginaPrincipal
             // 
@@ -221,5 +239,6 @@
         public System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.Button btnReceitas;
+        public System.Windows.Forms.Button btnReceitasFavoritas;
     }
 }

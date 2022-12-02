@@ -59,7 +59,7 @@
             this.cardReceita1.Location = new System.Drawing.Point(3, 2);
             this.cardReceita1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardReceita1.Name = "cardReceita1";
-            this.cardReceita1.Size = new System.Drawing.Size(973, 159);
+            this.cardReceita1.Size = new System.Drawing.Size(1087, 159);
             this.cardReceita1.TabIndex = 1;
             this.cardReceita1.Titulo = null;
             // 

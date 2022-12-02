@@ -71,6 +71,7 @@ namespace LetsCook
                     while (final.Read())
                     {
                         receitas[k] = new Receitas();
+                        receitas[k].id = Convert.ToInt32(final["id"]);
                         receitas[k].titulo = final.GetString(1);
                         receitas[k].ingrediente = final.GetString(2);
                         receitas[k].modo_preparo = final.GetString(3);
@@ -95,9 +96,10 @@ namespace LetsCook
             {
                 lista[i] = new CardReceita();
 
+                lista[i].setId(receitas[i].id);
                 lista[i].Titulo = receitas[i].titulo;
                 lista[i].Ingredientes = receitas[i].ingrediente;
-                // lista[i].Descricao = receitas[i].modo_preparo;
+                lista[i].Descricao = receitas[i].modo_preparo;
                 flowLayoutPanel1.Controls.Add(lista[i]);
             }
         }

@@ -14,7 +14,7 @@ namespace LetsCook
 {
     public partial class AdicionarReceitas : Form
     {
-        Classes.Receitas receitas = new Classes.Receitas();
+        Receitas receitas = new Receitas();
         string ingredientes;
         int cod_categoria;
         public AdicionarReceitas()
