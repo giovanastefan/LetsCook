@@ -42,12 +42,6 @@ namespace LetsCook
             get { return _descricao; }
             set { _descricao = value; richTextBox1.Text = value; }
         }
-
-        private void CardReceita_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
 

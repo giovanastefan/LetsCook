@@ -109,7 +109,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CardReceita";
             this.Size = new System.Drawing.Size(1015, 169);
-            this.Load += new System.EventHandler(this.CardReceita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

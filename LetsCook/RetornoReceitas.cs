@@ -94,9 +94,10 @@ namespace LetsCook
             for (int i = 0; i < lista.Length; i++)
             {
                 lista[i] = new CardReceita();
+
                 lista[i].Titulo = receitas[i].titulo;
                 lista[i].Ingredientes = receitas[i].ingrediente;
-                lista[i].Descricao = receitas[i].modo_preparo;
+                // lista[i].Descricao = receitas[i].modo_preparo;
                 flowLayoutPanel1.Controls.Add(lista[i]);
             }
         }

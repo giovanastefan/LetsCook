@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.cardReceita1 = new LetsCook.CardReceita();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,8 +46,22 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 76);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1030, 628);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1090, 628);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // cardReceita1
+            // 
+            this.cardReceita1.AutoScrollMargin = new System.Drawing.Size(2, 2);
+            this.cardReceita1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
+            this.cardReceita1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardReceita1.Descricao = null;
+            this.cardReceita1.Ingredientes = null;
+            this.cardReceita1.Location = new System.Drawing.Point(3, 2);
+            this.cardReceita1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardReceita1.Name = "cardReceita1";
+            this.cardReceita1.Size = new System.Drawing.Size(973, 159);
+            this.cardReceita1.TabIndex = 1;
+            this.cardReceita1.Titulo = null;
             // 
             // label1
             // 
@@ -59,19 +73,6 @@
             this.label1.Size = new System.Drawing.Size(275, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "Receitas Possíveis:";
-            // 
-            // cardReceita1
-            // 
-            this.cardReceita1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(234)))));
-            this.cardReceita1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardReceita1.Descricao = null;
-            this.cardReceita1.Ingredientes = null;
-            this.cardReceita1.Location = new System.Drawing.Point(3, 2);
-            this.cardReceita1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardReceita1.Name = "cardReceita1";
-            this.cardReceita1.Size = new System.Drawing.Size(1015, 159);
-            this.cardReceita1.TabIndex = 0;
-            this.cardReceita1.Titulo = null;
             // 
             // RetornoReceitas
             // 

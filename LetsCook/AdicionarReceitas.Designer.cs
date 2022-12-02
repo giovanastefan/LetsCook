@@ -42,6 +42,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtIngredientes = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +86,7 @@
             this.btnAdicionarReceita.FlatAppearance.BorderSize = 0;
             this.btnAdicionarReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(501, 569);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(501, 604);
             this.btnAdicionarReceita.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
             this.btnAdicionarReceita.Size = new System.Drawing.Size(530, 46);
@@ -100,7 +102,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(501, 623);
+            this.btnLimpar.Location = new System.Drawing.Point(501, 658);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(530, 46);
@@ -191,13 +193,34 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Registrar nova receita:";
             // 
+            // comboBoxCategoria
+            // 
+            this.comboBoxCategoria.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold);
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Location = new System.Drawing.Point(386, 544);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(322, 39);
+            this.comboBoxCategoria.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(210, 552);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 31);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Categoria:";
+            // 
             // AdicionarReceitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1536, 717);
+            this.ClientSize = new System.Drawing.Size(1536, 735);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIngredientes);
             this.Controls.Add(this.btnAdd);
@@ -238,5 +261,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.RichTextBox txtIngredientes;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
+        private System.Windows.Forms.Label label6;
     }
 }
