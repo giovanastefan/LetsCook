@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace LetsCook
 {
     internal class Conexao
     {
-        private string data_source = "Server=sql9.freemysqlhosting.net;Database=sql9576945;Uid=sql9576945;Pwd=k5A97GfcYr";
+        public string data_source = "Server=sql9.freemysqlhosting.net;Database=sql9576945;Uid=sql9576945;Pwd=k5A97GfcYr";
         public MySqlConnection Connection;
         public MySqlCommand cmd;
 
@@ -31,6 +32,12 @@ namespace LetsCook
             {
                 throw ex;
             }
+        }
+
+        public SqlConnection consultaConexao()
+        {
+            SqlConnection c = new SqlConnection(data_source);
+            return c;
         }
 
         public MySqlCommand consulta(string comando)
