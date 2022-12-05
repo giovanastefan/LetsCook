@@ -37,11 +37,14 @@ namespace LetsCook
 
                 conexao.fecharConexao();
             }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Receita já cadastrada como favorita, vá na aba receitas favoritas para conferir!");
+            }
             catch
             {
-                MessageBox.Show("Algo deu errado tente novamente");
+                MessageBox.Show("Algo deu errado, tente novamente mais tarde!");
             }
-
         }
     }
 }
