@@ -30,13 +30,18 @@ namespace LetsCook
         {
             Conexao conexao = new Conexao();
 
+            Usuario usuario = new Usuario();
+            usuario.setName(txtNome.Text);
+            usuario.setUser(txtUsuario.Text);
+            usuario.setPassword(txtSenha.Text);
+
             try
             {
                 string verificacao = "SELECT * from usuario where usuario = @usuario";
 
 
                 conexao.consulta(verificacao);
-                conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                conexao.cmd.Parameters.AddWithValue("@usuario", usuario.getUser());
                 var resultado = conexao.cmd.ExecuteScalar();
 
                 if (resultado != null)
@@ -52,9 +57,9 @@ namespace LetsCook
 
                     conexao.consulta(command);
 
-                    conexao.cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                    conexao.cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                    conexao.cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+                    conexao.cmd.Parameters.AddWithValue("@nome", usuario.getName());
+                    conexao.cmd.Parameters.AddWithValue("@usuario", usuario.getUser());
+                    conexao.cmd.Parameters.AddWithValue("@senha", usuario.getPassword());
 
                     conexao.cmd.Prepare();
 

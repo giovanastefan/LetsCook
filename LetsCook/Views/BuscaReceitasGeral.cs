@@ -104,5 +104,10 @@ namespace LetsCook
         {
             cardReceita1.Hide();
         }
+
+        private void cardReceita1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

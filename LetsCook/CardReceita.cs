@@ -51,9 +51,11 @@ namespace LetsCook
 
         private void buttonFavoritar_Click(object sender, EventArgs e)
         {
+            Conexao conexao = new Conexao();
+
             try
             {
-                Conexao conexao = new Conexao();
+               
                 Usuario usuario = new Usuario();
 
                 string comando = "INSERT INTO receitas_favoritas (cod_receita, cod_usuario) " +
@@ -74,6 +76,10 @@ namespace LetsCook
             }
             catch {
                 MessageBox.Show("Ops, algo deu errado tente novamente");
+            }
+            finally
+            {
+                conexao.fecharConexao();
             }
         }
 

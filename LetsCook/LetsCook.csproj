@@ -84,60 +84,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarReceitas.cs">
+    <Compile Include="Classes\Categoria.cs" />
+    <Compile Include="Views\AdicionarReceitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarReceitas.Designer.cs">
+    <Compile Include="Views\AdicionarReceitas.Designer.cs">
       <DependentUpon>AdicionarReceitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuscaReceitasGeral.cs">
+    <Compile Include="Views\BuscaReceitasGeral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscaReceitasGeral.Designer.cs">
+    <Compile Include="Views\BuscaReceitasGeral.Designer.cs">
       <DependentUpon>BuscaReceitasGeral.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuscarReceitas.cs">
+    <Compile Include="Views\BuscarReceitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarReceitas.Designer.cs">
+    <Compile Include="Views\BuscarReceitas.Designer.cs">
       <DependentUpon>BuscarReceitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs">
+    <Compile Include="Views\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
+    <Compile Include="Views\Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Conexao.cs" />
     <Compile Include="Classes\Receitas.cs" />
-    <Compile Include="HomePage.cs">
+    <Compile Include="Views\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="Views\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReceitasFavoritas.cs">
+    <Compile Include="Views\ReceitasFavoritas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReceitasFavoritas.Designer.cs">
+    <Compile Include="Views\ReceitasFavoritas.Designer.cs">
       <DependentUpon>ReceitasFavoritas.cs</DependentUpon>
     </Compile>
-    <Compile Include="RetornoReceitas.cs">
+    <Compile Include="Views\RetornoReceitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RetornoReceitas.Designer.cs">
+    <Compile Include="Views\RetornoReceitas.Designer.cs">
       <DependentUpon>RetornoReceitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicial.cs">
+    <Compile Include="Views\TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicial.Designer.cs">
+    <Compile Include="Views\TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaginaPrincipal.cs">
+    <Compile Include="Views\PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaginaPrincipal.Designer.cs">
+    <Compile Include="Views\PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -149,31 +150,31 @@
       <DependentUpon>CardReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Usuario.cs" />
-    <EmbeddedResource Include="AdicionarReceitas.resx">
+    <EmbeddedResource Include="Views\AdicionarReceitas.resx">
       <DependentUpon>AdicionarReceitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscaReceitasGeral.resx">
+    <EmbeddedResource Include="Views\BuscaReceitasGeral.resx">
       <DependentUpon>BuscaReceitasGeral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarReceitas.resx">
+    <EmbeddedResource Include="Views\BuscarReceitas.resx">
       <DependentUpon>BuscarReceitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro.resx">
+    <EmbeddedResource Include="Views\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
+    <EmbeddedResource Include="Views\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceitasFavoritas.resx">
+    <EmbeddedResource Include="Views\ReceitasFavoritas.resx">
       <DependentUpon>ReceitasFavoritas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RetornoReceitas.resx">
+    <EmbeddedResource Include="Views\RetornoReceitas.resx">
       <DependentUpon>RetornoReceitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicial.resx">
+    <EmbeddedResource Include="Views\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaginaPrincipal.resx">
+    <EmbeddedResource Include="Views\PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

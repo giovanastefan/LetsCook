@@ -10,7 +10,7 @@ namespace LetsCook
     internal class Usuario
     {
         private int id;
-        private string name;        
+        private string name;
         private string user;
         private string password;
 
@@ -42,6 +42,16 @@ namespace LetsCook
         public void setId(int id)
         {
             this.id = id;
+        }
+
+        public string getPassword()
+        {
+            return password;
+        }
+
+        public void setPassword(string password)
+        {
+            this.password = password;
         }
 
 
