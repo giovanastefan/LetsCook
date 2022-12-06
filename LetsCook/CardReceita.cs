@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,8 +57,6 @@ namespace LetsCook
             try
             {
                
-                Usuario usuario = new Usuario();
-
                 string comando = "INSERT INTO receitas_favoritas (cod_receita, cod_usuario) " +
                                      "VALUES (@cod_receita, @cod_usuario)";
 
@@ -70,12 +69,15 @@ namespace LetsCook
 
                 conexao.cmd.ExecuteNonQuery();
 
-                conexao.fecharConexao();
-
                 MessageBox.Show("Receita favoritada com sucesso!");
             }
-            catch {
-                MessageBox.Show("Ops, algo deu errado tente novamente");
+            catch (MySqlException)
+            {
+                MessageBox.Show("Receita já cadastrada como favorita, vá na aba receitas favoritas para conferir!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Algo deu errado, tente novamente mais tarde!", ex.ToString());
             }
             finally
             {

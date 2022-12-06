@@ -35,15 +35,17 @@ namespace LetsCook
 
                 dataGridView1.DataSource = dtb;
 
-                conexao.fecharConexao();
+                dataGridView1.Columns[0].Width = 200;
+                dataGridView1.Columns[1].Width = 300;
+                dataGridView1.Columns[2].Width = 345;
             }
-            catch (MySqlException)
-            {
-                MessageBox.Show("Receita já cadastrada como favorita, vá na aba receitas favoritas para conferir!");
-            }
-            catch
+            catch (Exception)
             {
                 MessageBox.Show("Algo deu errado, tente novamente mais tarde!");
+            }
+            finally
+            {
+                conexao.fecharConexao();
             }
         }
     }

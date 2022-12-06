@@ -82,7 +82,6 @@ namespace LetsCook
                 while (final.Read())
                 {
                     cod_categoria = Convert.ToInt32(final["idcategoria"]);
-                    MessageBox.Show(cod_categoria.ToString());
                 }
 
                 conexao.fecharConexao();

@@ -65,7 +65,7 @@ namespace LetsCook
 
                     conexao.cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Contado inserido com sucesso!",
+                    MessageBox.Show("Cadastro inserido com sucesso!",
                                      "Sucesso!", MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                 }
