@@ -31,7 +31,7 @@ namespace LetsCook
 
         public void setName(string name)
         {
-            this.name = user;
+            this.name = name;
         }
 
         public int getId()
